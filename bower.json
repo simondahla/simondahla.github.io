@@ -1,0 +1,12 @@
+{
+  "name": "simon-dah-la-2016-2",
+  "private": true,
+  "dependencies": {
+    "html5tooltipsjs": "^1.5.1",
+    "log": "^0.3.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
