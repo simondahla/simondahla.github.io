@@ -83,6 +83,7 @@ gulp.task('fonts', () => {
 
 gulp.task('extras', () => {
   return gulp.src([
+    'app/CNAME',
     'app/*.*',
     '!app/*.html'
   ], {
@@ -172,6 +173,13 @@ var ghOptions = {
   remoteUrl: 'https://github.com/simondahla/simondahla.github.io.git',
   branch: 'master'
 };
+
+gulp.task('copy', function () {
+  return gulp
+    .src('CNAME')
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('deploy', function () {
     gulp.src("dist/**/*.*")
         .pipe(deploy(ghOptions));
