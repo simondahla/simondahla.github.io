@@ -171,14 +171,9 @@ gulp.task('default', ['clean'], () => {
 
 var ghOptions = {
   remoteUrl: 'https://github.com/simondahla/simondahla.github.io.git',
-  branch: 'master'
+  branch: 'master',
+  force: true
 };
-
-gulp.task('copy', function () {
-  return gulp
-    .src('CNAME')
-    .pipe(gulp.dest('dist'));
-});
 
 gulp.task('deploy', function () {
     gulp.src("dist/**/*.*")
